@@ -1,0 +1,104 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DreamPrediction - Cricket</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+
+</head>
+<body>
+
+    <header class="header">
+        <h1>DreamPrediction - Cricket</h1>
+        <!-- Button to reveal the modal for "Know More" -->
+        <button class="know-more-button" onclick="toggleModal('infoModal')">Know More</button>
+
+        <!-- Button to reveal the modal for "Rules" (hidden feature) -->
+        <button class="rules-button" onclick="toggleModal('rulesModal')">
+            Rules
+        </button>
+    </header>
+
+    <!-- Modal for "Know More" -->
+    <div id="infoModal" class="modal">
+        <div class="modal-content">
+          <p>Safely enjoy our fantasy app with these quick tips:</p>
+          <p>1. Set limits on time and money.<br />
+          2. Know and stick to your budget.<br />
+          3. Understand app rules.<br />
+          4. Take regular breaks for a fresh mind.<br />
+          5. Protect personal information.<br />
+          6. Limit screen time for a balanced lifestyle.<br />
+          7. Engage in a positive and enjoyable gaming experience.</p>
+          <button class="close-button" onclick="toggleModal('infoModal')">Close</button>
+        </div>
+    </div>
+
+    <!-- Modal for "Rules" (hidden feature) -->
+    <div id="rulesModal" class="modal">
+        <div class="modal-content">
+          <p><strong>Team Formation:</strong></p>
+          <p>- Create a virtual team within a budget.</p>
+          <p>- Include batsmen, bowlers, all-rounders, and wicketkeepers.</p>
+          
+          <p><strong>Player Selection:</strong></p>
+          <p>- Select real players with assigned credit values.</p>
+          <p>- Stay within the budget.</p>
+          
+          <p><strong>Captain and Vice-Captain:</strong></p>
+          <p>- Designate a captain (double points) and a vice-captain (1.5x points).</p>
+          
+          <p><strong>Points System:</strong></p>
+          <p>- Earn points based on players' actual performance.</p>
+          <p>- Points for runs, wickets, catches, etc.</p>
+          <p>- Negative points for poor performance.</p>
+        
+        
+          
+          <button class="close-button" onclick="toggleModal('rulesModal')">Close</button>
+        </div>
+    </div>
+
+    <div class="container">
+        <img src="WhatsApp Image 2023-12-16 at 20.41.38_d90fe741.jpg" alt="Cricket Image" class="featured-image">
+        
+        <div class="content">
+            <p>Welcome to DreamPrediction - your ultimate destination for cricket predictions. You can find your JACKPOT team using our website where you access a free tool to find your lucky team.</p>
+            <p>Check out your <a href="#">predictions</a> for upcoming matches by giving player data <a href="#">to find</a> your team.</p>
+        </div>
+        
+        <button class="predict-button" onclick="window.location.href='your_link_here'">Let's Predict</button>
+    </div>
+
+    <footer style="color: #606060; font-family: 'sans-serif'; padding: 8px 20px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
+        <!-- Logo Link -->
+        <a href="WhatsApp Image 2023-12-16 at 20.41.38_d90fe741.jpg" style="display: flex; align-items: center; text-decoration: none; color: #000; font-weight: bold;">
+            <!-- Logo SVG -->
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" style="width: 40px; height: 40px; padding: 5px; background-color: #4f46e5; border-radius: 50%; margin-right: 10px;">
+                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+            </svg>
+            <!-- Company Name -->
+            <span style="font-size: 1.5rem; margin-left: 10px; color: white;">DreamPrediction</span>
+        </a>
+      
+        <!-- Copyright Text -->
+        <p style="font-size: 0.8rem; margin-left: 10px;  color: white;">© 2023 DreamPrediction — <a href="https://www.instagram.com/uday_shetty770?igshid=OGQ5ZDc2ODk2ZA==" style="text-decoration: none; color: #fff4f4; margin-left: 1px;" rel="noopener noreferrer" target="_blank">@uday_shetty</a></p>
+      
+        <!-- Social Media Links -->
+        <span style="display: flex; justify-content: flex-end; align-items: center;">
+            <!-- Social Media Icons -->
+        </span>
+    </footer>
+
+    <script>
+        // JavaScript function to toggle the visibility of the modal
+        function toggleModal(modalId) {
+            var modal = document.getElementById(modalId);
+            modal.style.display = (modal.style.display === 'none') ? 'flex' : 'none';
+        }
+    </script>
+    
+</body>
+</html>

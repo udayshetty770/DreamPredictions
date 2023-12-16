@@ -1,0 +1,207 @@
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header h1 {
+    margin: 0;
+    padding: 10px;
+    display: inline-block;
+    margin-right: auto; /* Move website name to the left */
+    background-color: #fff; /* Background color for the container */
+    color: #333; /* Text color */
+    border-radius: 0 10px 10px 0; /* Border radius for the left side of the container */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
+    transform: skew(-20deg); /* Skew to create trapezoid shape */
+}
+
+
+.know-more-button,
+.rules-button {
+    display: inline-block;
+    background-color: #5397ca;
+    color: #333;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 0; /* Remove any margin */
+}
+
+.rules-button {
+    background-color: #3498db;
+    color: #fff;
+}
+.rules-button:hover {
+    background-color: #21618b;
+}
+
+
+.know-more-button {
+    background-color: #3498db;
+    color: #fff;
+    margin-right: 10px; /* Add a little space between buttons */
+}
+.know-more-button:hover {
+    background-color: #21618b;
+}
+
+
+.banner {
+    background-color: #555;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    margin-top: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+/* Style for the modal content */
+.modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    max-width: 600px;
+}
+
+/* Style for the close button */
+.close-button {
+    background-color: #f44336;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.container {
+    max-width: 800px;
+    margin: 60px auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+    overflow: hidden;
+}
+
+.featured-image {
+    width: 35%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    float: left;
+    margin-right: 20px;
+}
+
+.predict-button {
+    margin-right: auto;
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.predict-button:hover {
+    background-color: #21618b;
+}
+
+.content {
+    margin-top: 20px;
+    line-height: 1.6;
+    color: #555;
+}
+
+a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    background-color: #5a5555;
+    color: #e6dfdf;
+    font-family: 'sans-serif';
+    padding: 10px 0; /* Updated padding */
+    margin-right: 40px; /* Remove margin */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+
+
+.footer .logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+}
+
+.footer .logo svg {
+    width: 40px;
+    height: 40px;
+    padding: 5px;
+    background-color: #4f46e5;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.footer .logo .company-name {
+    font-size: 1.5rem;
+    margin-left: 10px;
+}
+
+.footer .copyright {
+    font-size: 0.8rem;
+    margin-left: 10px;
+}
+
+.footer .social-links {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.footer .social-links a {
+    text-decoration: none;
+    color: #606060;
+    margin-left: 10px;
+}
+
+.footer .social-links a svg {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}
