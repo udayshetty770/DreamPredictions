@@ -1,0 +1,205 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DreamPrediction - Cricket</title>
+    <link rel="stylesheet" type="text/css" href="moon.css">
+    <style>
+        #player-form {
+            max-width: 400px;
+            margin: 50px auto;
+        }
+
+        .player-entry {
+            margin-bottom: 10px;
+        }
+
+        .remove-player {
+            cursor: pointer;
+            color: red;
+            font-weight: bold;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<header class="header">
+    <h1>DreamPrediction - Cricket</h1>
+</header>
+<br>
+<br>
+<br>
+<br>
+
+<div class="container">
+    <center>
+        <h1 id="unique-heading">Player List</h1>
+
+        <div id="player-form" class="player-entry">
+            <h2>Add All Player Data</h2>
+
+           
+            <strong><em><label for="playerName">Player Name:</label></em></strong>
+
+            <input type="text" id="playerName" placeholder="Enter player name">
+
+            <br>
+            <br>
+
+           
+            <strong><em><label for="playerStats">Player Stats:</label></em></strong>
+            <input type="text" id="playerStats" placeholder="Enter player stats">
+
+            <br>
+            <br>
+
+            
+            <strong><em><label for="playerTeam">Player Team:</label></em></strong>
+            <input type="text" id="playerTeam" placeholder="Enter player team">
+
+            <br>
+            <br>
+
+            
+            <strong><em><label for="playerRole">Player Role:</label></em></strong>
+            <input type="text" id="playerRoleInput" list="playerRoles" placeholder="Select Player Role">
+
+            <br>
+            <br>
+
+            <button onclick="addPlayer()">Add Player</button>
+        </div>
+
+        <h2>Player List</h2>
+        <ul id="playerList"></ul>
+    </center>
+</div>
+
+<div id="slider-container">
+    <div id="slider">
+      <div class="slide visible">Container 1</div>
+      <div class="slide">Container 2</div>
+      <div class="slide">Container 3</div>
+      <div class="slide">Container 4</div>
+      <div class="slide">Container 5</div>
+      <div class="slide">Container 6</div>
+      <div class="slide">Container 7</div>
+      <div class="slide">Container 8</div>
+      <div class="slide">Container 9</div>
+      <div class="slide">Container 10</div>
+      <div class="slide">Container 11</div>
+      <div class="slide">Container 12</div>
+      <div class="slide">Container 13</div>
+      <div class="slide">Container 14</div>
+      <div class="slide">Container 15</div>
+      <div class="slide">Container 16</div>
+      <div class="slide">Container 17</div>
+      <div class="slide">Container 18</div>
+      <div class="slide">Container 19</div>
+      <div class="slide">Container 20</div>
+    </div>
+  
+    <!-- Navigation buttons -->
+    <button class="prev" onclick="prevSlide()">Previous</button>
+    <button class="next" onclick="nextSlide()">Next</button>
+  </div>
+  
+
+<footer style="color: #606060; font-family: 'sans-serif'; padding: 8px 20px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
+    <!-- Logo Link -->
+    <a href="WhatsApp Image 2023-12-16 at 20.41.38_d90fe741.jpg" style="display: flex; align-items: center; text-decoration: none; color: #000; font-weight: bold;">
+        <!-- Logo SVG -->
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" style="width: 40px; height: 40px; padding: 5px; background-color: #4f46e5; border-radius: 50%; margin-right: 10px;">
+            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+        </svg>
+        <!-- Company Name -->
+        <span style="font-size: 1.5rem; margin-left: 10px; color: white;">DreamPrediction</span>
+    </a>
+
+    <!-- Copyright Text -->
+    <p style="font-size: 0.8rem; margin-left: 10px;  color: white;">© 2023 DreamPrediction — <a href="https://www.instagram.com/uday_shetty770?igshid=OGQ5ZDc2ODk2ZA==" style="text-decoration: none; color: #fff4f4; margin-left: 1px;" rel="noopener noreferrer" target="_blank">@uday_shetty @Tanmai_N</a></p>
+
+    <!-- Social Media Links -->
+    <span style="display: flex; justify-content: flex-end; align-items: center;">
+        <!-- Social Media Icons -->
+    </span>
+</footer>
+
+
+<script>
+    var teamNames = [];
+    var playerCount = 0;
+
+    function addPlayer() {
+        // Check if the maximum limit of 30 players is reached
+        if (playerCount >= 30) {
+            alert('You have reached the maximum limit of 30 players.');
+            return;
+        }
+
+        var playerName = document.getElementById('playerName').value;
+        var playerStats = document.getElementById('playerStats').value;
+        var playerTeamInput = document.getElementById('playerTeam');
+        var playerRoleInput = document.getElementById('playerRoleInput');
+        var playerRole = playerRoleInput.value;
+
+        // Validate playerStats to ensure it is an integer
+        if (isNaN(parseInt(playerStats))) {
+            alert('Please enter a valid integer for playerStats.');
+            return;
+        }
+
+        // Validate playerRole to ensure it is one of the accepted types
+        var acceptedRoles = ['Batsman', 'Bowler', 'All-round', 'Wicketkeeper'];
+        if (!acceptedRoles.includes(playerRole)) {
+            alert('Please enter a valid player role: Batsman, Bowler, All-round, or Wicketkeeper.');
+            return;
+        }
+
+        // Validate playerTeam to ensure it is one of the accepted team names
+        if (!teamNames.includes(playerTeamInput.value)) {
+            if (teamNames.length >= 2) {
+                alert('You can only enter two different team names.');
+                return;
+            } else {
+                teamNames.push(playerTeamInput.value);
+            }
+        }
+
+        if (playerName && playerTeamInput.value) {
+            var playerList = document.getElementById('playerList');
+            var listItem = document.createElement('li');
+            listItem.className = 'player';
+            listItem.textContent = playerName + ' - ' + playerStats + ' - ' + playerTeamInput.value + ' - ' + playerRole;
+            playerList.appendChild(listItem);
+
+            // Increment player count
+            playerCount++;
+
+            // Clear input fields
+            document.getElementById('playerName').value = '';
+            document.getElementById('playerStats').value = '';
+            playerTeamInput.value = '';
+            playerRoleInput.value = '';
+        } else {
+            alert('Please enter all player information.');
+        }
+    }
+</script>
+
+<script src="aPP.js"></script>
+
+
+<!-- Add this HTML for the player role input with datalist -->
+<datalist id="playerRoles">
+    <option value="Batsman">
+    <option value="Bowler">
+    <option value="All-round">
+    <option value="Wicketkeeper">
+</datalist>
+
+</body>
+</html>

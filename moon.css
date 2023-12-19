@@ -1,0 +1,302 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-y: auto;
+    margin-bottom: auto;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+  }
+  
+
+.header h1 {
+    margin: 0;
+    padding: 10px;
+    display: inline-block;
+    margin-right: auto; /* Move website name to the left */
+    background-color: #fff; /* Background color for the container */
+    color: #333; /* Text color */
+    border-radius: 0 10px 10px 0; /* Border radius for the left side of the container */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
+    transform: skew(-20deg); /* Skew to create trapezoid shape */
+}
+
+h2 {
+    color: #fff;
+    background: linear-gradient(45deg, #3498db, #e74c3c);
+    padding: 10px;
+    border-radius: 5px;
+    display: inline-block;
+    transition: background 0.3s ease-in-out;
+}
+
+h2:hover {
+    background: linear-gradient(45deg, #4caf50, #45a049);
+    cursor: pointer;
+}
+
+
+
+
+:root {
+    --text-color: white;
+    --padding-vertical: 40px;
+    --padding-horizontal: 230px;
+    --background-image: url('abc.png');
+    --background-size: 60%;
+    --background-position: center;
+}
+
+#unique-heading {
+    text-align: left;
+    font-size: 3em; /* Adjust the font size as needed */
+    font-style: italic;
+    font-weight: bold;
+    font-weight: bold;
+    color: #0b0e10; /* Change the color as needed */
+    text-shadow: 4px 4px 8px rgba(255, 254, 254, 0.7);
+    padding: var(--padding-vertical) var(--padding-horizontal);
+    margin: 0;
+    background-image: var(--background-image);
+    background-size: var(--background-size);
+    background-position: var(--background-position);
+    background-repeat: no-repeat;
+}
+
+
+.container {
+    max-width: 800px;
+    margin: 60px auto;
+    background-color: #dedbdb;
+    padding: 15px; /* Adjusted padding to include the border width */
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+    overflow: hidden;
+}
+
+h2 {
+    color: #333;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.input-container {
+    /* Add a border to the input container */
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+input {
+    max-width: 100%; /* Adjusted width to be responsive */
+    margin: 8px 0; /* Adjusted margin */
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px; /* Adjusted border radius */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+    box-sizing: border-box;
+    border: none; /* Remove default input border */
+}
+
+/* Optional: Add some margin to the input container */
+
+
+
+
+button {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+
+.player-container {
+    background-color: #f0f0f0; /* Set the background color for the player list */
+    padding: 15px; /* Adjusted padding for spacing */
+    border-radius: 10px; /* Adjusted border radius */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Adjusted box shadow */
+    overflow: hidden;
+    margin-top: 20px; /* Optional margin for spacing from other elements */
+}
+
+.player {
+    background-color: #eee;
+    padding: 10px;
+    margin-bottom: 5px;
+    border-radius: 4px;
+}
+
+
+.content {
+    margin-top: 20px;
+    line-height: 1.6;
+    color: #555;
+}
+
+a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+#slider-container {
+    max-width: 800px;
+    margin: 60px auto;
+    background-color: #b4a5a5;
+    padding: 15px; /* Adjusted padding to include the border width */
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+    overflow: hidden;
+    position: relative; /* Position relative for absolute positioning of buttons */
+  }
+
+  #slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+
+  .slide {
+    max-width: 800px;
+    margin: 60px auto;
+    background-color: #dedbdb;
+    padding: 15px; /* Adjusted padding to include the border width */
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+    overflow: hidden;
+    display: none; /* Initially hide the containers */
+    transition: opacity 0.5s ease-in-out; /* Add transition effect for opacity */
+  }
+
+  .visible {
+    display: block;
+    opacity: 1; /* Make the container fully visible */
+  }
+
+  /* Positioning the navigation buttons */
+
+  .prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  width: auto;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 5px;
+  user-select: none;
+  background-color: #5a97cf;
+  border: none;
+}
+
+.prev {
+  left: 20px; /* Adjust the left position */
+  top: 50%; /* Keep the vertical centering */
+  transform: translateY(-50%);
+}
+
+.next {
+  right: 20px; /* Adjust the right position */
+  top: 50%; /* Keep the vertical centering */
+  transform: translateY(-50%);
+}
+
+
+  /* Optional: Add styles for navigation button hover effect */
+  .prev:hover, .next:hover {
+    background-color: #555;
+  }
+  footer {
+    background-color: #5a5555;
+    color: #e6dfdf;
+    font-family: 'sans-serif';
+    padding: 10px 20px; /* Updated padding */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    bottom: 0;
+    z-index: 2; /* Adjust the value as needed */
+}
+
+.footer .logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+}
+
+.footer .logo svg {
+    width: 40px;
+    height: 40px;
+    padding: 5px;
+    background-color: #4f46e5;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.footer .logo .company-name {
+    font-size: 1.5rem;
+    margin-left: 10px;
+}
+
+.footer .copyright {
+    font-size: 0.8rem;
+    margin-left: 10px;
+}
+
+.footer .social-links {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.footer .social-links a {
+    text-decoration: none;
+    color: #606060;
+    margin-left: 10px;
+}
+
+.footer .social-links a svg {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}
+
+
